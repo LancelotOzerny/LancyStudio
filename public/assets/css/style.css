@@ -1,0 +1,63 @@
+.text-indent-25
+{
+    text-indent: 25px;
+}
+.page-block
+{
+    padding: 100px 0;
+}
+.page-title, .page-subtitle
+{
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0;
+
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.page-title
+{
+    font-size: 3rem;
+    border: 2px solid #222;
+    display: inline-block;
+    padding: 0 50px;
+    cursor: pointer;
+    transition: .2s;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+
+.page-subtitle
+{
+    font-size: 1.5rem;
+    color: #222;
+}
+
+@media screen and (max-width: 640px)
+{
+    .page-title
+    {
+        font-size: 2rem;
+    }
+    .page-subtitle
+    {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+    .page-title
+    {
+        border-left: none;
+        border-right: none;
+        font-size: 1.5rem;
+    }
+    .page-subtitle
+    {
+        font-size: 1.2rem;
+    }
+}
