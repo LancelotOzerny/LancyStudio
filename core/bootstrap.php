@@ -6,3 +6,5 @@ use Core\Classes\Router;
 
 $router = new Router();
 require_once HOME_PATH . '/core/config/routes.php';
+
+$router->start();
