@@ -1,10 +1,12 @@
 <?php
 namespace Develop\Controllers;
 
-class Main
+use Core\Classes\Controller;
+
+class Main extends Controller
 {
-    public function index()
+    public function index() : void
     {
-        echo 'It Is Main Action!';
+        $this->view('main');
     }
 }
