@@ -2,3 +2,6 @@
 /** @var \Core\Classes\Router $router */
 
 $router->add('/', 'Main::index');
+$router->add('/blog', 'Main::blog');
+$router->add('/portfolio', 'Main::portfolio');
+$router->add('/certificates', 'Main::certificates');
