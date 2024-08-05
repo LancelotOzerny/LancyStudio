@@ -7,12 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Административная панель</title>
 
-    <link rel="stylesheet" href="/assets/css/bootstrap-4.4.1.css">
-    <script src="/assets/js/script.js"></script>
-
+    <link rel="stylesheet" href="/templates/admin/assets/css/bootstrap-4.4.1.css">
 </head>
 <body>
-
-<div class="container">
-    <h2>test</h2>
-</div>
