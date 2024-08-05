@@ -14,7 +14,7 @@
     </div>
     <div class="row">
         <div class="col-6 col-md-4 pb-3">
-            <a href="/admin/user" class="text-dark">Пользователи</a>
+            <a href="/admin/settings/user" class="text-dark">Пользователи</a>
         </div>
     </div>
 </div>
