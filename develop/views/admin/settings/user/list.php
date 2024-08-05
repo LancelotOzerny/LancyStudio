@@ -1,3 +1,7 @@
+<?php
+$userList = $data['userList'] ?? [];
+?>
+
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -21,17 +25,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <th>0</th>
-                        <td>Lancelot</td>
-                        <td>lancelot.ozernuy@gmail.com</td>
-                        <td>admin</td>
-                        <td class='text-right'>
-                            <a href="#" class="btn btn-danger">Удалить</a>
-                            <a href="#" class="btn btn-secondary">Изменить</a>
-                        </td>
-                    </tr>
+                    <?php foreach ($userList as $user): ?>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <th><?= $user['id'] ?></th>
+                            <td><?= $user['login'] ?></td>
+                            <td><?= $user['email'] ?></td>
+                            <td><?= $user['name'] ?></td>
+                            <td class='text-right'>
+                                <a href="#" class="btn btn-danger">Удалить</a>
+                                <a href="#" class="btn btn-secondary">Изменить</a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
