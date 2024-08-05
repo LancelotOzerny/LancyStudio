@@ -1,6 +1,8 @@
 <?php
 /** @var \Core\Classes\Router $router */
 
+$router->add('/admin/user', 'Admin/User::list');
+
 $router->add('/', 'Main::index');
 $router->add('/blog', 'Main::blog');
 $router->add('/portfolio', 'Main::portfolio');
