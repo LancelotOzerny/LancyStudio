@@ -11,58 +11,63 @@ html
 {
     padding: 100px 0;
 }
-.page-title, .page-subtitle
+.page-title-wrapper
 {
-    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+}
+.page-title
+{
+    display: inline-block;
+    font-size: 2rem;
     font-weight: 300;
-    margin: 0;
+    text-align: center;
+
+    position: relative;
+
+    text-transform: uppercase;
+    background-color: #ffcb67;
+    color: #222;
+
+    padding: 10px 75px;
 
     user-select: none;
     -ms-user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+
+    border-radius: 25px 25px 0 0;
 }
 
 .page-title
 {
-    font-size: 3rem;
-    border: 2px solid #222;
-    display: inline-block;
-    padding: 0 50px;
-    cursor: pointer;
-    transition: .2s;
-    border-radius: 2px;
-    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 5px #888;
 }
 
-.page-subtitle
+.page-title::after, .page-title::before
 {
-    font-size: 1.5rem;
-    color: #222;
+    content: "";
+
+    width: 100px;
+    height: 60px;
+
+    background-size: 100% 100%;
+    background-image: url("/templates/main/assets/images/title-side-element.png");
+
+    position: absolute;
+    top: 40px;
+    z-index: -1;
 }
 
-@media screen and (max-width: 640px)
+.page-title::before
 {
-    .page-title
-    {
-        font-size: 2rem;
-    }
-    .page-subtitle
-    {
-        font-size: 1.2rem;
-    }
+    left: -98px;
 }
 
-@media screen and (max-width: 480px)
+.page-title::after
 {
-    .page-title
-    {
-        border-left: none;
-        border-right: none;
-        font-size: 1.5rem;
-    }
-    .page-subtitle
-    {
-        font-size: 1.2rem;
-    }
+    right: -98px;
+    transform: scaleX(-1);
 }

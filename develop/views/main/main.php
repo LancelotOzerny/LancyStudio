@@ -1,12 +1,9 @@
 <div class="page-block border-bottom">
     <div class="container">
         <div class="row">
-            <div class="col-12 pb-4 d-flex flex-column align-items-center align-items-lg-baseline">
+            <div class="col-12 pb-4">
                 <div class="page-title-wrapper">
-                    <p class="page-title">О себе</p>
-                </div>
-                <div class="page-subtitle-wrapper">
-                    <a class="page-subtitle" href="#">vk.com</a>
+                    <p class="page-title">Вкратце о себе</p>
                 </div>
             </div>
         </div>
