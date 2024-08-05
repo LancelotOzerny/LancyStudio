@@ -13,8 +13,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-6 col-md-4 pb-3">
-            <a href="/admin/settings/user" class="text-dark">Пользователи</a>
-        </div>
+        <div class="col-6 col-md-4 pb-3"><a href="/admin/settings/user" class="text-dark">Пользователи</a></div>
+        <div class="col-6 col-md-4 pb-3"><a href="/admin/settings/rights" class="text-dark">Права доступа</a></div>
     </div>
 </div>
