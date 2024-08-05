@@ -24,38 +24,41 @@ class Router
         {
             if ($route['from'] === $url)
             {
-                $filePath = HOME_PATH . '/develop/controllers/' . $route['controller'] . '.php';
-               if (file_exists($filePath))
-               {
-                   include $filePath;
-
-                   $action = $route['action'];
-                   $classPath = 'Develop\\Controllers\\' . str_replace('/', '\\', $route['controller']);
-
-                   if (class_exists($classPath))
-                   {
-                       $class = new $classPath();
-
-                       if (method_exists($class, $action))
-                       {
-                           $class->$action();
-                       }
-                       else
-                       {
-                           echo "Method '$action' is not exists in class '$classPath'";
-                       }
-                   }
-                   else
-                   {
-                       echo "Class '$classPath' is not founded!";
-                   }
-               }
-               else
-               {
-                   echo "File '$filePath' is not exists!";
-               }
+                $included = $this->includeFileIfExists($route['controller'], $route['action']);
+                if ($included)
+                {
+                    return;
+                }
             }
         }
+        $included = $this->includeFileIfExists('Page404', 'index');
+        if ($included === false)
+        {
+            echo 'Page 404';
+        }
+    }
+
+    private function includeFileIfExists(string $controller, string $action)
+    {
+        $filePath = HOME_PATH . '/develop/controllers/' . $controller . '.php';
+        if (file_exists($filePath))
+        {
+            include $filePath;
+            $classPath = 'Develop\\Controllers\\' . str_replace('/', '\\', $controller);
+
+            if (class_exists($classPath))
+            {
+                $class = new $classPath();
+
+                if (method_exists($class, $action))
+                {
+                    $class->$action();
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     public function getRoutes()
