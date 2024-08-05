@@ -2,6 +2,7 @@
 /** @var \Core\Classes\Router $router */
 
 $router->add('/admin/settings/user', 'Admin/User::list');
+$router->add('/admin/settings/rights', 'Admin/Rights::list');
 $router->add('/admin', 'Admin/Home::index');
 
 $router->add('/', 'Main::index');
