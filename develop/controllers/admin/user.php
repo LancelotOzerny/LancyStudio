@@ -6,8 +6,8 @@ use Core\Classes\Controller;
 
 class User extends Controller
 {
-    public function list()
+    public function list() : void
     {
-        $this->view('admin/settings/user/list');
+        $this->view('admin/settings/user/list', 'admin');
     }
 }
