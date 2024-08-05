@@ -31,6 +31,11 @@ class Model
     {
         $this->query = Database::getConnection()->query($this->querySql);
     }
+    public function join(string $joinTable, string $from_field, string $to_field)
+    {
+        $joinSql = " JOIN $joinTable ON $from_field = $to_field";
+        $this->querySql .= $joinSql;
+    }
 
     public function getAll() : array
     {
