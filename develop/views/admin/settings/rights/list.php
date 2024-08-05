@@ -1,7 +1,11 @@
+<?php
+$rightsList = $data['rights'] ?? [];
+?>
+
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <p class="text-center py-2 text-white my-4 display-4 bg-dark">Пользовательские права</p>
+            <p class="text-center py-2 text-white my-4 display-4 bg-dark">Права доступа</p>
         </div>
     </div>
 </div>
@@ -21,20 +25,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                    <td><input type="checkbox"></td>
-                    <th>0</th>
-                    <td>Admin</td>
-                    <td>100</td>
-                    <td>
-                        Самый привелегироавныый пользовательское право, которое обеспечивает пользователя доступом
-                        в административную часть
-                    </td>
-                    <td class='d-flex justify-content-end'>
-                        <a href="#" class="btn btn-danger">Удалить</a>
-                        <a href="#" class="btn btn-secondary ml-1">Изменить</a>
-                    </td>
-                </tr>
+                    <?php foreach ($rightsList as $right): ?>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <th><?= $right['id'] ?></th>
+                            <td><?= $right['name'] ?></td>
+                            <td><?= $right['level'] ?></td>
+                            <td><?= $right['description'] ?></td>
+                            <td class='d-flex justify-content-end'>
+                                <a href="#" class="btn btn-danger">Удалить</a>
+                                <a href="#" class="btn btn-secondary ml-1">Изменить</a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
