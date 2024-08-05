@@ -8,14 +8,9 @@ class Template
 {
     use Singleton;
 
-    public function Disp()
-    {
-        echo '<br/>test<br/>test<br/>test<br/>test<br/>test';
-    }
-
     public function IncludeHeader(string $templateName)
     {
-        $path = HOME_PATH . "/develop/templates/$templateName/header.php";
+        $path = HOME_PATH . "/public/templates/$templateName/header.php";
         if (file_exists($path))
         {
             include $path;
@@ -28,7 +23,7 @@ class Template
 
     public function IncludeFooter(string $templateName)
     {
-        $path = HOME_PATH . "/develop/templates/$templateName/footer.php";
+        $path = HOME_PATH . "/public/templates/$templateName/footer.php";
         if (file_exists($path))
         {
             include $path;
