@@ -3,6 +3,8 @@
 
 $router->add('/admin/settings/user', 'Admin/User::list');
 $router->add('/admin/settings/rights', 'Admin/Rights::list');
+
+$router->add('/admin/login', 'Admin/Auth::login');
 $router->add('/admin', 'Admin/Home::index');
 
 $router->add('/', 'Main::index');
