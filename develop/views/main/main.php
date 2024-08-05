@@ -13,7 +13,7 @@
         <div class="row pt-md-5">
             <div class="col-12 mb-5 d-flex align-items-center justify-content-center">
                 <div class="d-flex">
-                    <img class="rounded-circle" style="max-width: 100%" src="assets/images/profile.png" alt="Profile Image">
+                    <img class="rounded-circle" style="max-width: 100%" src="/templates/main/assets/images/profile.png" alt="Profile Image">
                 </div>
             </div>
             <div class="col-12 text-indent-25 text-justify">
