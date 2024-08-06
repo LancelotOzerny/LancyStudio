@@ -20,11 +20,9 @@ class Router
 
     public function start()
     {
-        $url = $_SERVER['REQUEST_URI'];
-
         foreach ($this->routesList as $route)
         {
-            if ($route['from'] === $url)
+            if ($route['from'] === CURRENT_URL)
             {
                 $access = $this->isAccessAllowed($route['access_level']);
                 if ($access === false)
