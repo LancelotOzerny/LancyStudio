@@ -47,7 +47,7 @@ class Model
         $whereParams = [];
         foreach ($params as $key => $value)
         {
-             $whereParams[] = "`$key` = " . (gettype($value) === 'integer' ? $value : "'$value'");
+             $whereParams[] = "$key = " . (gettype($value) === 'integer' ? $value : "'$value'");
         }
 
         $this->querySql .= join(', ', $whereParams);
