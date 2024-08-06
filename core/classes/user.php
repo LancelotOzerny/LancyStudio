@@ -10,7 +10,12 @@ class User
     public string $email = '';
     public string $rightsName = '';
 
-    public function __construct(int $id = 0)
+    public function __construct()
+    {
+
+    }
+
+    public function loadById()
     {
         $model = new User_Model();
         $model->select(['users.id', 'users.login', 'users.email', 'rights.name', 'rights.level']);
