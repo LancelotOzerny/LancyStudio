@@ -2,12 +2,11 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Административная панель</title>
+    <title>Title</title>
 
-    <link rel="stylesheet" href="/templates/admin/assets/css/bootstrap-4.4.1.css">
-    <script src="/templates/admin/assets/js/jQuery-3.7.1.js"></script>
+    <link rel="stylesheet" href="/templates/main/assets/css/bootstrap5.3.min.css">
+    <link rel="stylesheet" href="/templates/main/assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
