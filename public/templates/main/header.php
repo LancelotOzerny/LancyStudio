@@ -4,26 +4,42 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <link rel="stylesheet" href="/templates/main/assets/css/bootstrap-4.4.1.css">
+    <link rel="stylesheet" href="/templates/main/assets/css/bootstrap5.3.min.css">
     <link rel="stylesheet" href="/templates/main/assets/css/style.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom position-sticky w-100">
-    <div class="container d-flex justify-content-between">
-        <a class="navbar-brand" href="#">
+
+<header class="border-bottom bg-light px-2 px-sm-0">
+    <nav class="container navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">
             <img src="/templates/main/assets/images/logo.png" alt="Lancy" width="64">
         </a>
-        <div class="collapse navbar-collapse">
+        <button class="navbar-toggler"  type="button" data-bs-toggle="offcanvas" data-bs-target="#navigationCanvas">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="/">Главная</a>
-                <a class="nav-link" href="/portfolio">Портфолио</a>
-                <a class="nav-link" href="/certificates">Сертификаты</a>
-                <a class="nav-link" href="/blog">Блог</a>
+                <a class="nav-link <?= CURRENT_URL === '/' ? 'active' : ''?>" href="/">Главная</a>
+                <a class="nav-link <?= CURRENT_URL === '/portfolio' ? 'active' : ''?>" href="/portfolio">Портфолио</a>
             </div>
         </div>
-        <a class="profile d-flex align-items-center text-dark" href="#">
-            <div class="mr-2">Вход/Регистрация</div>
-            <img src="/templates/main/assets/images/empty_profile_icon.png" alt="profile" width="64">
-        </a>
+    </nav>
+
+    <div class="offcanvas offcanvas-start hide" tabindex="-1" id="navigationCanvas" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand" href="/">
+                <img src="/templates/main/assets/images/logo.png" alt="Lancy" width="64">
+            </a>
+            <button type="button" class="btn-close" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#navigationCanvas" aria-label="Закрыть"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="navbar-nav">
+                <a class="nav-link <?= CURRENT_URL === '/' ? 'active' : ''?>" href="/">Главная</a>
+                <a class="nav-link <?= CURRENT_URL === '/portfolio' ? 'active' : ''?>" href="/portfolio">Портфолио</a>
+            </div>
+        </div>
     </div>
-</nav>
+
+</header>
