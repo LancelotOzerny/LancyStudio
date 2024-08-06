@@ -8,5 +8,6 @@
     <title>Административная панель</title>
 
     <link rel="stylesheet" href="/templates/admin/assets/css/bootstrap-4.4.1.css">
+    <script src="/templates/admin/assets/js/jQuery-3.7.1.js"></script>
 </head>
 <body>
