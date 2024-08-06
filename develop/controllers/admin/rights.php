@@ -15,11 +15,9 @@ class Rights extends Controller
 
     public function list() : void
     {
+        $data = [];
         $this->model->select();
-        $this->model->query();
         $data['rights'] = $this->model->getAll();
-
-
         $this->view('admin/settings/rights/list', 'admin', $data);
     }
 }

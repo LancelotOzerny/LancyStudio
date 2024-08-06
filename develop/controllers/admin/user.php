@@ -16,11 +16,9 @@ class User extends Controller
 
     public function list() : void
     {
+        $data = [];
         $this->model->select(['users.id', 'users.login', 'users.email', 'rights.name']);
         $this->model->join('rights', 'users.rights_id', 'rights.id');
-        $this->model->query();
-
-        $data = [];
         $data['userList'] = $this->model->getAll();
 
         $this->view('admin/settings/user/list', 'admin', $data);
