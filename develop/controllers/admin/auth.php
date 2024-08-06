@@ -10,6 +10,11 @@ class Auth extends Controller
 {
     public function auth()
     {
+        if (USER->isNull === false)
+        {
+            header('Location:/admin/');
+        }
+
         $errors = [];
 
         if (Request::Instance()->isPost('user-login') === false)
@@ -58,6 +63,11 @@ class Auth extends Controller
     }
     public function login()
     {
+        if (USER->isNull === false)
+        {
+            header('Location:/admin/');
+        }
+
         $this->view('admin/login', 'admin');
     }
 }
