@@ -2,8 +2,9 @@
     <div class="row">
         <div class="col-12 d-flex flex-column justify-content-center align-items-center" style="height: 100vh">
             <div class="wrapper">
-                <p class="pb-4 display-4">Авторизация</p>
-                <form style="width: 300px">
+                <p class="pb-4 display-4 text-center">Авторизация</p>
+                <div id="MessagesContainer"></div>
+                <form>
                     <div class="mb-3">
                         <label for="InputLogin" class="form-label">Логин</label>
                         <input type="text" class="form-control" id="InputLogin">
@@ -34,8 +35,20 @@
             },
             success: (data) => {
                 let dataList = JSON.parse(data);
-                console.log(dataList);
-            }
+
+                if (dataList.length === 0)
+                {
+                    location.reload();
+                    return;
+                }
+
+                let messagesHtml = '';
+                for (let i = 0, count = dataList.length; i < count; ++i)
+                {
+                    messagesHtml += '<div class="alert alert-danger">' + dataList[i] + '</div>';
+                }
+                $("#MessagesContainer").html(messagesHtml);
+            },
         });
     });
 </script>
