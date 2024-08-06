@@ -1,4 +1,5 @@
-<script src="/assets/js/bootstrap.js"></script>
-<script src="/assets/js/jQuery-3.7.1.js"></script>
+    <script src="/templates/main/assets/js/jquery-3.7.1.slim.min.js"></script>
+    <script src="/templates/main/assets/js/popper.min.js"></script>
+    <script src="/templates/main/assets/js/bootstrap.min.js"></script>
 </body>
 </html>
