@@ -5,7 +5,7 @@ class Router
 {
     private $routesList = [];
 
-    public function add(string $from, string $to)
+    public function add(string $from, string $to, int $levelRight = 0)
     {
         [$controller, $action] = explode('::', $to);
 
