@@ -23,7 +23,8 @@ class Auth extends Controller
 
         if (count($errors) > 0)
         {
-            return $errors;
+            echo json_encode($errors);
+            return;
         }
 
         $login = Request::Instance()->getPost('user-login');
@@ -34,10 +35,10 @@ class Auth extends Controller
 
         $model = new User_Model();
         $model->select(['id', 'login', 'password']);
-        $model->where(['email' => $login]);
+        $model->where(['login' => $login]);
 
         $userArr = $model->getFirst();
-        if (count($userArr) > 0)
+        if ($userArr !== false && count($userArr) > 0)
         {
             if (password_verify($password, $userArr['password']))
             {
@@ -50,8 +51,9 @@ class Auth extends Controller
         }
         else
         {
-            $errors[] = 'Пользователь с таким email не найден!';
+            $errors[] = 'Пользователь с таким логином не найден!';
         }
+
         echo json_encode($errors);
     }
     public function login()

@@ -15,10 +15,27 @@
                     </div>
 
                     <div class="d-flex justify-content-center pt-4">
-                        <button id="AuthButon" class="btn btn-success text-uppercase">войти</button>
+                        <button type="button" id="AuthButton" class="btn btn-success text-uppercase">войти</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    $('#AuthButton').click(() => {
+        $.ajax({
+            'url' : '/admin/auth',
+            'method' : 'post',
+            'data': {
+                'user-login': $("#InputLogin").val(),
+                'user-password': $("#InputPassword").val(),
+            },
+            success: (data) => {
+                let dataList = JSON.parse(data);
+                console.log(dataList);
+            }
+        });
+    });
+</script>

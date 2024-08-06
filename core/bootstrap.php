@@ -12,10 +12,10 @@ require_once HOME_PATH . '/core/config/routes.php';
 
 \Core\Classes\Request::Instance()->init();
 
-$user = null;
+$user = new User();
 if (isset($_SESSION['current-user-id']))
 {
-    $user = new User(intval($_SESSION['current-user-id']));
+    $user->loadById($_SESSION['current-user-id']);
 }
-
+define('USER', $user);
 $router->start();
