@@ -2,6 +2,7 @@
 namespace Develop\Controllers;
 
 use Core\Classes\Controller;
+use Develop\Models\Admin\Content\Projects_Model;
 
 class Main extends Controller
 {
@@ -17,7 +18,13 @@ class Main extends Controller
 
     public function portfolio() : void
     {
-        $this->view('main/portfolio', 'main');
+        $data = [];
+
+        $model = new Projects_Model();
+        $model->select(['id', 'name', 'short_description', 'image_src']);
+        $data['projectsList'] = $model->getAll();
+
+        $this->view('main/portfolio', 'main', $data);
     }
 
     public function certificates() : void

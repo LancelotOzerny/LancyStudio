@@ -1,5 +1,5 @@
 <?php
-$userList = $data['userList'] ?? [];
+$projectList = $data['projectsList'] ?? [];
 ?>
 
 <div class="container">
@@ -26,18 +26,14 @@ $userList = $data['userList'] ?? [];
                 </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ([0, 1, 2, 3, 4, 5] as $project): ?>
+                    <?php foreach ($projectList as $project): ?>
                     <tr>
                         <td><input type="checkbox" class="form-check-input"></td>
-                        <th>0</th>
-                        <td>Limited Figure</td>
-                        <td>19.10.2002</td>
-                        <td>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias atque earum et eum facere
-                            incidunt iusto laborum maxime quo vel! Aperiam dolore earum error eveniet iure, magnam
-                            molestias quod ratione.
-                        </td>
-                        <td>WEB, PHP</td>
+                        <th><?= $project['id'] ?></th>
+                        <td><?= $project['name'] ?></td>
+                        <td><?= $project['date'] ?></td>
+                        <td><?= $project['short_description'] ?></td>
+                        <td><?= $project['type'] ?></td>
                         <td class='text-right'>
                             <a href="#" class="btn btn-secondary my-1"><i class="fa fa-pencil"></i></a>
                             <a href="#" class="btn btn-danger my-1"><i class="fa fa-trash"></i></a>
