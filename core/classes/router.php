@@ -60,6 +60,8 @@ class Router
     private function includeFileIfExists(string $controller, string $action)
     {
         $filePath = HOME_PATH . '/develop/controllers/' . $controller . '.php';
+        $filePath = mb_strtolower($filePath);
+
         if (file_exists($filePath))
         {
             include $filePath;
