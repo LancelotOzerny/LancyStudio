@@ -1,3 +1,7 @@
+<?php
+$projectsList = $data['projectsList'] ?? [];
+?>
+
 <div class="page-block border-bottom">
     <div class="container">
         <div class="row">
@@ -9,20 +13,21 @@
         </div>
 
         <div class="row pt-md-5">
-            <?php for ($i = 0; $i < 8; ++$i): ?>
+            <?php foreach ($projectsList as $project): ?>
             <div class="col-12 col-sm-6 col-lg-4">
                 <div class="project-wrapper overflow-hidden position-relative mb-4">
-                    <img class="w-100" src="/templates/main/assets/images/no_image.png" alt="test">
+                    <img class="w-100"
+                         src="<?= $project['image_src'] ?: '/templates/main/assets/images/no_image.png' ?>" alt="test">
                     <div class="project-info position-absolute">
-                        <p class="text-center">The causen</p>
-                        <p class="project-info-description">Игровое приложение, в котором вам предстоит пройти удивительное приключение</p>
+                        <p class="text-center"><?= $project['name'] ?></p>
+                        <p class="project-info-description"><?= $project['short_description'] ?></p>
                         <div class="d-flex justify-content-center">
                             <a class="mx-auto" href="#">Перейти</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
