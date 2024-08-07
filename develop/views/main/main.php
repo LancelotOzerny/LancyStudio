@@ -1,5 +1,5 @@
 <div class="page-block border-bottom">
-    <div class="container">
+    <div class="container-xl">
         <div class="row">
             <div class="col-12 pb-4">
                 <div class="page-title-wrapper">
@@ -7,12 +7,14 @@
                 </div>
             </div>
         </div>
-        <div class="row pt-md-5">
+        <div class="row">
             <div class="col-12 mb-5 d-flex align-items-center justify-content-center">
                 <div class="d-flex">
                     <img class="rounded-circle" style="max-width: 100%" src="/templates/main/assets/images/profile.png" alt="Profile Image">
                 </div>
             </div>
+        </div>
+        <div class="row pt-md-5">
             <div class="col-12 text-indent-25 text-justify">
                 <p>В далеком 2002-м году в Липецкой области родился суперспособный парень, получивший при
                     рождении имя Максим. Уже с пеленок он показал невероятную тягу к знаниям. Пока другие дети дни
@@ -27,7 +29,8 @@
                 </p>
                 <p>
                     Чем закончится борьба между суперспособным человеком и одним из его врагов? Боюсь,
-                    что пока что остается только гадать... Но все покажут время, и портфолио, которое находится ниже.
+                    что пока что остается только гадать... Но все покажут время, и
+                    <a class="text-dark" href="/portfolio">портфолио</a>...
                 </p>
             </div>
         </div>

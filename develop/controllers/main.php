@@ -21,7 +21,7 @@ class Main extends Controller
         $data = [];
 
         $model = new Projects_Model();
-        $model->select(['id', 'name', 'short_description', 'image_src']);
+        $model->select(['id', 'name', 'short_description', 'image_src', 'link']);
         $data['projectsList'] = $model->getAll();
 
         $this->view('main/portfolio', 'main', $data);

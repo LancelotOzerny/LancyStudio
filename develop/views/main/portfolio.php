@@ -22,7 +22,7 @@ $projectsList = $data['projectsList'] ?? [];
                         <p class="text-center"><?= $project['name'] ?></p>
                         <p class="project-info-description"><?= $project['short_description'] ?></p>
                         <div class="d-flex justify-content-center">
-                            <a class="mx-auto" href="#">Перейти</a>
+                            <a class="mx-auto" href="<?= $project['link'] ?>">Перейти</a>
                         </div>
                     </div>
                 </div>
