@@ -17,3 +17,14 @@
         <div class="col-6 col-md-4 pb-3"><a href="/admin/settings/rights" class="text-dark">Права доступа</a></div>
     </div>
 </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <p class="py-5 display-4">Управление контентом</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 col-md-4 pb-3"><a href="/admin/content/projects" class="text-dark">Проекты</a></div>
+    </div>
+</div>
