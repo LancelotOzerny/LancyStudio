@@ -3,8 +3,9 @@
 
 function RequireClass(string $name)
 {
-    $path = str_replace('\\', '/', $name);
-    $path = HOME_PATH . '/' . mb_strtolower($name) . '.php';
+    $path = HOME_PATH . '/' . $name . '.php';
+    $path = str_replace('\\', '/', $path);
+    $path = mb_strtolower($path);
 
     if (file_exists($path))
     {
