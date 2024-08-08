@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Title</title>
+    <title>Портфолио разработчика</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="navbar-nav">
                 <a class="nav-link <?= CURRENT_URL === '/' ? 'active' : ''?>" href="/">Главная</a>
-                <a class="nav-link <?= CURRENT_URL === '/portfolio' ? 'active' : ''?>" href="/portfolio">Портфолио</a>
+                <a class="nav-link <?= CURRENT_URL === '/portfolio/' ? 'active' : ''?>" href="/portfolio">Портфолио</a>
             </div>
         </div>
     </nav>
